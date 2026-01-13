@@ -67,11 +67,12 @@ const Transfer = () => {
                             : 'rgba(30, 41, 59, 0.4)',
                         border: transferType === 'international' ? '2px solid var(--primary)' : '1px solid var(--glass-border)',
                         fontWeight: transferType === 'international' ? '600' : '400',
-                        transition: 'all 0.3s'
+                        transition: 'all 0.3s',
+                        color: transferType === 'international' ? 'var(--primary)' : 'var(--text)',
                     }}
                 >
                     <Globe size={20} />
-                    <span>Chuyển tiền quốc tế</span>
+                    <span className='text-white'>Chuyển tiền quốc tế</span>
                 </button>
 
                 <button
@@ -89,11 +90,12 @@ const Transfer = () => {
                             : 'rgba(30, 41, 59, 0.4)',
                         border: transferType === 'domestic' ? '2px solid var(--primary)' : '1px solid var(--glass-border)',
                         fontWeight: transferType === 'domestic' ? '600' : '400',
-                        transition: 'all 0.3s'
+                        transition: 'all 0.3s',
+                        color: transferType === 'domestic' ? 'var(--primary)' : 'var(--text)',
                     }}
                 >
                     <MapPin size={20} />
-                    <span>Chuyển nội địa</span>
+                    <span className='text-white'>Chuyển nội địa</span>
                 </button>
             </div>
 
