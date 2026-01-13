@@ -16,17 +16,17 @@ const Navbar = () => {
   }
 
   const navItems = [
-    { path: '/', label: 'Home', icon: Home },
+    // { path: '/', label: 'Home', icon: Home },
     { path: '/transfer', label: 'Transfer', icon: Send },
     { path: '/history', label: 'History', icon: History },
   ];
 
   return (
-    <nav className="glass-panel" style={{ 
-      margin: '0 0 24px 0', 
-      padding: '16px 24px', 
-      display: 'flex', 
-      justifyContent: 'space-between', 
+    <nav className="glass-panel" style={{
+      margin: '0 0 24px 0',
+      padding: '16px 24px',
+      display: 'flex',
+      justifyContent: 'space-between',
       alignItems: 'center',
       position: 'sticky',
       top: 24,
@@ -71,12 +71,12 @@ const Navbar = () => {
           <span style={{ fontSize: '0.9rem', fontWeight: 600 }}>User</span>
           <span style={{ fontSize: '0.75rem', color: 'var(--success)' }}>1,250 Points</span>
         </div>
-        <button 
+        <button
           onClick={handleLogout}
-          style={{ 
-            background: 'rgba(239, 68, 68, 0.1)', 
-            color: 'var(--error)', 
-            padding: '8px', 
+          style={{
+            background: 'rgba(239, 68, 68, 0.1)',
+            color: 'var(--error)',
+            padding: '8px',
             borderRadius: '8px',
             display: 'flex', alignItems: 'center', justifyContent: 'center'
           }}
