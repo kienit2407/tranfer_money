@@ -15,16 +15,6 @@ const History = () => {
         <div className="page-container">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
                 <h1 style={{ fontSize: '28px' }}>Transaction History</h1>
-                <div style={{ display: 'flex', gap: '12px' }}>
-                    <button className="glass-panel" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)' }}>
-                        <Filter size={18} />
-                        Filter
-                    </button>
-                    <button className="glass-panel" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--secondary)' }}>
-                        <Calendar size={18} />
-                        This Month
-                    </button>
-                </div>
             </div>
 
             <div className="glass-panel" style={{ padding: '24px' }}>

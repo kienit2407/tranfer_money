@@ -1,0 +1,252 @@
+/* Bạn có thể đặt các biến này vào global css nếu đã có */
+:root {
+    --text-main: rgba(255, 255, 255, 0.92);
+    --text-muted: rgba(255, 255, 255, 0.65);
+    --panel-bg: rgba(255, 255, 255, 0.06);
+    --panel-border: rgba(255, 255, 255, 0.10);
+    --panel-inner: rgba(255, 255, 255, 0.03);
+
+    --success: #10b981;
+    --error: #ef4444;
+    --secondary: #a78bfa;
+    /* bạn có thể đổi theo theme */
+}
+
+.page-container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    color: var(--text-main);
+}
+
+/* Header */
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.history-title {
+    font-size: 28px;
+    margin: 0 0 6px;
+}
+
+.history-subtitle {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.history-actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* Glass */
+.glass-panel {
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.history-panel {
+    padding: 24px;
+}
+
+.glass-button {
+    border: 1px solid var(--panel-border);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-main);
+    border-radius: 12px;
+    padding: 8px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: transform 0.15s, background 0.15s;
+}
+
+.glass-button:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.glass-button.muted {
+    color: var(--text-muted);
+}
+
+.glass-button.accent {
+    color: var(--secondary);
+}
+
+/* Search */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    background: rgba(0, 0, 0, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.search-icon {
+    color: var(--text-muted);
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: var(--text-main);
+    font-size: 16px;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+/* List */
+.tx-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tx-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 16px;
+    border-radius: 12px;
+    background: var(--panel-inner);
+    transition: transform 0.15s, background 0.15s;
+}
+
+.tx-item:hover {
+    transform: scale(1.01);
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.tx-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+}
+
+.tx-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tx-icon.sent {
+    background: rgba(239, 68, 68, 0.12);
+    color: var(--error);
+}
+
+.tx-icon.received {
+    background: rgba(16, 185, 129, 0.12);
+    color: var(--success);
+}
+
+.tx-meta {
+    min-width: 0;
+}
+
+.tx-name {
+    font-size: 16px;
+    margin: 0 0 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tx-subline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.dot {
+    opacity: 0.7;
+}
+
+.tx-status {
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.tx-status.completed {
+    color: var(--success);
+}
+
+.tx-status.failed {
+    color: var(--error);
+}
+
+.tx-status.processing {
+    color: #f59e0b;
+}
+
+/* Right */
+.tx-right {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.tx-amount {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.tx-amount.positive {
+    color: var(--success);
+}
+
+.tx-points {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--secondary);
+}
+
+.gift {
+    line-height: 1;
+}
+
+/* Empty */
+.empty-state {
+    border: 1px dashed rgba(255, 255, 255, 0.16);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+}
+
+.empty-title {
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.empty-desc {
+    color: var(--text-muted);
+    font-size: 14px;
+}
