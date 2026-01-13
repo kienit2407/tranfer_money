@@ -4,7 +4,7 @@ import { ArrowDown, DollarSign, CreditCard, Send as SendIcon, Globe, MapPin } fr
 const Transfer = () => {
     const [transferType, setTransferType] = useState('international'); // 'domestic' or 'international'
     const [amount, setAmount] = useState('');
-    const [recipient, setRecipient] = useState({ name: '', bank: '', account: '' });
+    // const [recipient, setRecipient] = useState({ name: '', bank: '', account: '' });
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
 
